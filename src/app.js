@@ -11,6 +11,7 @@ const partialsDirPath = path.join(__dirname, '../templates/partials')
 
 //App definition
 app = express()
+const port = process.env.PORT || 80
 app.use(express.static(publicDirPath))
 app.set('view engine', 'hbs')
 app.set('views', viewsDirPath)
@@ -77,6 +78,6 @@ app.get('*', (req, res) => {
 })
 
 // Server port specification
-app.listen(80, () => {
-    console.log('Server is up at 80')
+app.listen(port, () => {
+    console.log('Server is up at ' + port)
 })
