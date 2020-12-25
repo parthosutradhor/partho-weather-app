@@ -36,7 +36,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         name:'Partho Sutra Dhor',
-        helpText: 'This is help text'
+        helpText: 'This is help text. Fetch Weather by putting Location.'
     })
 })
 
